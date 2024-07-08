@@ -38,7 +38,6 @@ router.get("/restaurants", getAllRestaurants);
 router.get(
   "/restaurant/:id",
   authentication,
-  roleVerification,
   getSingleRestaurant
 );
 
