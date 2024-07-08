@@ -25,7 +25,7 @@ module.exports.createUser = async (req, res) => {
     };
     user = user.toObject();
     delete user.password;
-    jwt.sign(payload, process.env.SECRET, { expiresIn: 3600 }, (err, token) => {
+    jwt.sign(payload, process.env.SECRET, { expiresIn: 360000 }, (err, token) => {
       if (err) throw err;
       res.json({ token:token,status:200,success:true });
     });
